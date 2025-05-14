@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../csc210Lab/CSC210lab2"
+		},
+		{
+			"path": "../../CSC170Lab/csc170lab4"
+		},
+		{
+			"path": "../../csc210Lab/csc210lab01"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "CSC210_project1"
+	}
+}
