@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>User Profile</h1>
+        <div class="profile-info">
+            <div>
+                <label>Username:</label>
+                <span>{{ user.username }}</span>
+            </div>
+            <div>
+                <label>Email:</label>
+                <span>{{ user.email }}</span>
+            </div>
+        </div>
+        <ul>
+            <li><a href="{{ url_for('login') }}">Back to Login</a></li>
+            <li><a href="{{ url_for('products') }}">Go to Products List</a></li>
+        </ul>
+        
+    </div>
+    </div>
+</body>
+</html>
