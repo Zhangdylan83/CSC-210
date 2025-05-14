@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Scores</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>All Game Scores</h1>
+    <div style="margin-bottom: 20px;">
+        <a href="{{ url_for('game') }}">Start Your Game</a> |
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Score</th>
+                <th>Trials</th>
+                <th>Time</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for score in scores %}
+            <tr>
+                <td>{{ score.user.username }}</td>
+                <td>{{ score.score }}</td>
+                <td>{{ score.trials }}</td>
+                <td>{{ score.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                <td>
+                    {% if score.user_id == session['user_id'] %}
+                    <form method="POST" action="{{ url_for('delete_score', score_id=score.id) }}">
+                        <button type="submit">Delete</button>
+                    </form>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
