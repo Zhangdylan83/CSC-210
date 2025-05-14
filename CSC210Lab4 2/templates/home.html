@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            
+            {% if session.get('user_id') %}
+            <li><a href="{{ url_for('user_profile') }}">Profile</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Welcome to CSC210 Lab4!</h1>
+        <p>This is a public page accessible to everyone. Explore my website features by navigating through the site.</p>
+        <p>Wanna a joke when grading my lab, and here it is:
+            Why don't scientists trust atoms? Because they make up everything!
+        </p>
+    </div>
+</body>
+</html>
