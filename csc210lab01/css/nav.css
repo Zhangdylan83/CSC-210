@@ -1,0 +1,12 @@
+.menus ul{
+    list-style-type: none;  /*delete the ul symbol*/
+    border: 1px solid black ;
+    margin: 0 auto;
+    width: fit-content;
+    padding-left:0
+}
+
+.menus ol{
+    list-style-type: none;
+}
+

@@ -1,0 +1,58 @@
+.italic{
+    font-style: italic;
+}
+
+
+.color{
+    color: blue;
+}
+
+/*
+class selector
+*/
+.bold{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/*
+descendent selector header and h3 nested
+*/
+section h3, h4{
+    font-size: 30px;
+    font-style: italic;
+    color: red;
+}
+
+
+/*
+element selector
+*/
+h2{
+    background-color:lightblue
+}
+
+/*
+container trick is used at some point on the page to constrain the content into the center of the viewport
+*/
+.container{
+    margin: 0 auto;
+    width: 90%;
+    max-width:500px;
+}
+
+.sideBySide{
+    display:grid;
+    grid-template-columns: 1fr 500px;
+    width: 90%
+    
+}
+.paddingLeft{
+    padding-left: 50px;
+}
+
+.image-container img{
+    width: 100%;
+    height: 100px;
+    
+}
